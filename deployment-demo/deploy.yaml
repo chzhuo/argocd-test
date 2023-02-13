@@ -25,7 +25,7 @@ spec:
           resources:
             limits:
               memory: "128Mi"
-              cpu: "500m"
+              cpu: "600m"
           volumeMounts:
             - name: myapp
               mountPath: /config
