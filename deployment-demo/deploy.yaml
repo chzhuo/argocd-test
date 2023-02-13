@@ -24,8 +24,8 @@ spec:
           image: argoproj/rollouts-demo:blue
           resources:
             limits:
-              memory: "128Mi"
               cpu: "600m"
+              memory: "128Mi"
           volumeMounts:
             - name: myapp
               mountPath: /config
