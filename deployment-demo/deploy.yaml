@@ -24,7 +24,7 @@ spec:
           image: argoproj/rollouts-demo:blue
           resources:
             limits:
-              cpu: "600m"
+              cpu: "700m"
               memory: "128Mi"
           volumeMounts:
             - name: myapp
