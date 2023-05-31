@@ -13,7 +13,24 @@ spec:
             value: "ArgoCD"
         port: 8080
   policies:
-    - name: topology-hangzhou-clusters
+    - name: topology-local
       type: topology
       properties:
-        clusters: ["local", "dev"]
+        clusters: ["local"]
+    - name: topology-dev
+      type: topology
+      properties:
+        clusters: ["dev"]
+        namespace: test
+  workflow:
+    steps:
+      - type: deploy
+        name: deploy-local
+        properties:
+          policies: ["topology-local"]
+      - type: deploy
+        name: deploy-dev
+        properties:
+          # require manual approval before running this step
+          auto: false
+          policies: ["topology-dev"]
