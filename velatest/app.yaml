@@ -7,7 +7,7 @@ spec:
     - name: wf-poc-app-2
       type: webservice
       properties:
-        image: oamdev/helloworld-python:v1
+        image: nginx:1.24.0
         env:
           - name: "TARGET"
             value: "ArgoCD"
