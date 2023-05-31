@@ -12,3 +12,8 @@ spec:
           - name: "TARGET"
             value: "ArgoCD"
         port: 8080
+  policies:
+    - name: topology-hangzhou-clusters
+      type: topology
+      properties:
+        clusters: ["local", "dev"]
